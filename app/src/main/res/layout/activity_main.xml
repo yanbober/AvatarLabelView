@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="cn.label.avatarlabelview.MainActivity">
+
+    <cn.label.library.LabelView
+        app:num="01"
+        app:text="Top"
+        app:textSize="10sp"
+        app:numSize="20sp"
+        app:numStyle="bold"
+        app:labelTopPadding="8dp"
+        app:backgroundColor="#ff483a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:num="02"
+        app:text="Top"
+        app:numSize="14sp"
+        app:textSize="9sp"
+        app:backgroundColor="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:num="9:00"
+        app:text="早场"
+        app:numSize="14sp"
+        app:textSize="9sp"
+        app:numStyle="normal"
+        app:labelTopPadding="15dp"
+        app:labelCenterPadding="15dp"
+        app:direction="leftTop"
+        app:backgroundColor="@color/colorAccent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:num="20:00"
+        app:text="晚场"
+        app:numStyle="italic"
+        app:numSize="14sp"
+        app:textSize="9sp"
+        app:direction="leftTop"
+        app:labelTopPadding="15dp"
+        app:labelCenterPadding="5dp"
+        app:labelBottomPadding="10dp"
+        app:backgroundColor="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
