@@ -21,30 +21,37 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package cn.label.library;
+package cn.label.avatarlabelview;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
-import android.view.View;
+import android.widget.LinearLayout;
+import cn.label.library.LabelViewHelper;
 /**
- * A View's Label implementation View.
+ * A ViewGroup's Label implementation View.
+ * Other ViewGroup's Label implement can refer to this.
  */
-public class LabelView extends View {
+public class LabelLinearLayout extends LinearLayout {
     private LabelViewHelper mLabelViewHelper;
 
-    public LabelView(Context context) {
+    public LabelLinearLayout(Context context) {
         this(context, null);
     }
 
-    public LabelView(Context context, AttributeSet attrs) {
+    public LabelLinearLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public LabelView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LabelLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
         mLabelViewHelper = new LabelViewHelper(context, attrs);
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
+        mLabelViewHelper.drawLabel(this, canvas);
     }
 
     public void setTextContent(String content) {
@@ -60,18 +67,5 @@ public class LabelView extends View {
     public void setLabelBackGroundColor(int color) {
         mLabelViewHelper.setLabelBackGroundColor(color);
         invalidate();
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        mLabelViewHelper.drawLabel(this, canvas);
-    }
-
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int rotateViewWH= (int) (mLabelViewHelper.getBgTriangleHeight() * Math.sqrt(2));
-        setMeasuredDimension(rotateViewWH, rotateViewWH);
     }
 }

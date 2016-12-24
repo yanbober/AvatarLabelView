@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_label_title_size">10sp</dimen>
+    <dimen name="default_label_content_size">12sp</dimen>
+    <dimen name="default_label_top_padding">15dp</dimen>
+    <dimen name="default_label_bottom_padding">10dp</dimen>
+</resources>

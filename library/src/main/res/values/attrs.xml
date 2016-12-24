@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="LabelTextView">
+    <declare-styleable name="LabelView">
         <attr name="backgroundColor" format="color"/>
-        <attr name="textColor" format="color"/>
-        <attr name="numColor" format="color"/>
+        <attr name="textTitleColor" format="color"/>
+        <attr name="textContentColor" format="color"/>
 
-        <attr name="text" format="string"/>
-        <attr name="num" format="string"/>
+        <attr name="textTitle" format="string"/>
+        <attr name="textContent" format="string"/>
 
-        <attr name="numSize" format="dimension"/>
-        <attr name="textSize" format="dimension"/>
+        <attr name="textTitleSize" format="dimension"/>
+        <attr name="textContentSize" format="dimension"/>
 
         <attr name="labelTopPadding" format="dimension"/>
         <attr name="labelCenterPadding" format="dimension"/>
         <attr name="labelBottomPadding" format="dimension"/>
+        <attr name="labelTopDistance" format="dimension"/>
 
-
-        <attr name="numStyle">
+        <attr name="textTitleStyle">
             <enum name="normal" value="0"/>
             <enum name="italic" value="1"/>
             <enum name="bold" value="2"/>
         </attr>
 
-        <attr name="textStyle">
+        <attr name="textContentStyle">
             <enum name="normal" value="0"/>
             <enum name="italic" value="1"/>
             <enum name="bold" value="2"/>

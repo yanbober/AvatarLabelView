@@ -1,64 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:columnCount="2"
     tools:context="cn.label.avatarlabelview.MainActivity">
 
     <cn.label.library.LabelView
-        app:num="01"
-        app:text="Top"
-        app:textSize="10sp"
-        app:numSize="20sp"
-        app:numStyle="bold"
-        app:labelTopPadding="8dp"
-        app:backgroundColor="#ff483a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <cn.label.library.LabelView
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:num="02"
-        app:text="Top"
-        app:numSize="14sp"
-        app:textSize="9sp"
-        app:backgroundColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <cn.label.library.LabelView
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        app:num="9:00"
-        app:text="早场"
-        app:numSize="14sp"
-        app:textSize="9sp"
-        app:numStyle="normal"
+        app:textTitle="12:24"
+        app:textContent="爆款热销"
+        app:textTitleSize="9sp"
+        app:textContentSize="14sp"
+        app:textContentStyle="bold"
         app:labelTopPadding="15dp"
-        app:labelCenterPadding="15dp"
-        app:direction="leftTop"
-        app:backgroundColor="@color/colorAccent"
+        app:labelCenterPadding="8dp"
+        app:backgroundColor="#ff4d32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <cn.label.library.LabelView
-        app:num="20:00"
-        app:text="晚场"
-        app:numStyle="italic"
-        app:numSize="14sp"
-        app:textSize="9sp"
-        app:direction="leftTop"
+        app:textTitle="12:24"
+        app:textContent="爆款热销"
+        app:textTitleSize="9sp"
+        app:textContentSize="14sp"
+        app:textTitleStyle="italic"
+        app:textTitleColor="#ff4d32"
+        app:textContentColor="#f167"
         app:labelTopPadding="15dp"
+        app:labelCenterPadding="8dp"
+        app:backgroundColor="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:textTitle="12:24"
+        app:textContent="爆款热销"
+        app:textTitleSize="15sp"
+        app:textContentSize="15sp"
+        app:textTitleStyle="italic"
+        app:textTitleColor="#ff4d32"
+        app:textContentColor="#f167"
+        app:labelTopPadding="25dp"
+        app:labelCenterPadding="10dp"
+        app:labelBottomPadding="15dp"
+        app:backgroundColor="@android:color/darker_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:textTitle="12:24"
+        app:textContent="爆款热销"
+        app:textTitleSize="9sp"
+        app:textContentSize="14sp"
+        app:textContentStyle="bold"
+        app:labelTopPadding="15dp"
+        app:labelCenterPadding="8dp"
+        app:backgroundColor="#ff4d32"
+        app:direction="rightTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:textTitle="12:24"
+        app:textContent="爆款热销"
+        app:textTitleSize="9sp"
+        app:textContentSize="14sp"
+        app:textContentStyle="bold"
+        app:labelTopDistance="15dp"
+        app:labelTopPadding="10dp"
         app:labelCenterPadding="5dp"
+        app:backgroundColor="#ff4d32"
+        app:direction="rightTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:textTitle="折扣"
+        app:textContent="我是打酱油的"
+        app:textTitleSize="10sp"
+        app:textContentSize="8sp"
+        app:textContentStyle="bold"
+        app:labelTopDistance="20dp"
+        app:labelTopPadding="5dp"
+        app:labelCenterPadding="5dp"
+        app:backgroundColor="#032dd0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:textContent="我是打酱油的"
+        app:textContentSize="8sp"
+        app:textContentStyle="bold"
+        app:labelTopDistance="20dp"
+        app:labelTopPadding="10dp"
+        app:backgroundColor="#032dd0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.library.LabelView
+        app:textContent="火爆"
+        app:textContentSize="15sp"
+        app:textContentStyle="bold"
+        app:labelTopPadding="20dp"
+        app:backgroundColor="#ff4d32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <cn.label.avatarlabelview.LabelImageView
+        app:textContent="晚场"
+        app:textContentSize="14sp"
+        app:direction="leftTop"
+        app:labelTopDistance="20dp"
+        app:labelTopPadding="10dp"
         app:labelBottomPadding="10dp"
         app:backgroundColor="@color/colorPrimaryDark"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+        android:src="@mipmap/ic_launcher"
+        android:background="#f323d4"
+        android:layout_width="150dp"
+        android:layout_height="100dp"/>
+
+    <cn.label.avatarlabelview.LabelImageView
+        app:textContent="晚场"
+        app:textContentSize="14sp"
+        app:direction="rightTop"
+        app:labelTopDistance="20dp"
+        app:labelTopPadding="10dp"
+        app:labelBottomPadding="10dp"
+        app:backgroundColor="@color/colorPrimaryDark"
+        android:src="@mipmap/ic_launcher"
+        android:background="#f3a212"
+        android:layout_width="150dp"
+        android:layout_height="100dp"/>
+
+    <cn.label.avatarlabelview.LabelLinearLayout
+        app:textContent="晚场"
+        app:textContentSize="14sp"
+        app:direction="rightTop"
+        app:labelTopDistance="20dp"
+        app:labelTopPadding="10dp"
+        app:labelBottomPadding="10dp"
+        app:backgroundColor="@color/colorPrimaryDark"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@android:color/darker_gray"
+        android:layout_width="170dp"
+        android:layout_height="120dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="TitleXXXX"/>
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"/>
+    </cn.label.avatarlabelview.LabelLinearLayout>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_orange_dark"
+        android:orientation="horizontal">
+        <cn.label.library.LabelView
+            app:textTitle="12:24"
+            app:textContent="爆款热销"
+            app:textTitleSize="9sp"
+            app:textContentSize="14sp"
+            app:textContentStyle="bold"
+            app:labelTopPadding="15dp"
+            app:labelCenterPadding="8dp"
+            app:backgroundColor="#ff4d32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="占位符号"/>
+    </LinearLayout>
+
+</GridLayout>
