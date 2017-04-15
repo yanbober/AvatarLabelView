@@ -34,6 +34,7 @@ import cn.label.library.LabelViewHelper;
  */
 public class LabelLinearLayout extends LinearLayout {
     private LabelViewHelper mLabelViewHelper;
+    private boolean mLabelVisable = true;
 
     public LabelLinearLayout(Context context) {
         this(context, null);
@@ -51,7 +52,9 @@ public class LabelLinearLayout extends LinearLayout {
     @Override
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
-        mLabelViewHelper.drawLabel(this, canvas);
+        if (mLabelVisable) {
+            mLabelViewHelper.drawLabel(this, canvas);
+        }
     }
 
     public void setTextContent(String content) {
@@ -67,5 +70,10 @@ public class LabelLinearLayout extends LinearLayout {
     public void setLabelBackGroundColor(int color) {
         mLabelViewHelper.setLabelBackGroundColor(color);
         invalidate();
+    }
+
+    public void setLabelVisable(boolean visable) {
+        mLabelVisable = visable;
+        postInvalidate();
     }
 }

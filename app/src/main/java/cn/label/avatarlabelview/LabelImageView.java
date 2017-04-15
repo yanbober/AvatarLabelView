@@ -34,6 +34,7 @@ import cn.label.library.LabelViewHelper;
  */
 public class LabelImageView extends ImageView {
     private LabelViewHelper mLabelViewHelper;
+    private boolean mLabelVisable = true;
 
     public LabelImageView(Context context) {
         this(context, null);
@@ -51,7 +52,9 @@ public class LabelImageView extends ImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mLabelViewHelper.drawLabel(this, canvas);
+        if (mLabelVisable) {
+            mLabelViewHelper.drawLabel(this, canvas);
+        }
     }
 
     public void setTextContent(String content) {
@@ -67,5 +70,10 @@ public class LabelImageView extends ImageView {
     public void setLabelBackGroundColor(int color) {
         mLabelViewHelper.setLabelBackGroundColor(color);
         invalidate();
+    }
+
+    public void setLabelVisable(boolean visable) {
+        mLabelVisable = visable;
+        postInvalidate();
     }
 }
